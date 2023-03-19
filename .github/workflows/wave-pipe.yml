@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-22.04
     container: 
       image: borisdundakov/wave-heroku:0.1.0
+      options: --user root
     steps:
       - name: Checkout current repository
         uses: actions/checkout@v3
