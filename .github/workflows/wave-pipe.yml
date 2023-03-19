@@ -1,0 +1,18 @@
+#docker build --build-arg PYTHON_VERSION=3.10 --build-arg WAVE_VERSION=0.25.2 --build-arg PYTHON_MODULE="ai_app/app.py" -t wave-heroku:0.1.0 .
+
+#docker run --rm --name wave-heroku -p 10101:8008 -e PORT=8008 wave-heroku:0.1.0
+
+name: run server
+
+on:
+  push:
+
+
+jobs:
+  setup:
+    runs-on: ubuntu-22.04
+    container: 
+      image: borisdundakov/wave-heroku:0.1.0
+    steps:
+      - name: Checkout current repository
+        uses: actions/checkout@v3
