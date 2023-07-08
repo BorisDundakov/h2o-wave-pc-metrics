@@ -1,7 +1,7 @@
 import time, datetime
 from h2o_wave import site, ui, data, Q, main, app
 import psutil
-import speedtest
+import speedtest # speedtest-cli
 
 
 def bytes_to_mb(b):
@@ -84,7 +84,7 @@ boot_card = page.add('boot_stats', ui.small_series_stat_card(
     plot_color='$cyan',
 ))
 
-speed_test = speedtest.Speedtest()
+speed_test = speedtest.Speedtest(secure=True)
 download_speed = bytes_to_mb(speed_test.download())
 
 download_card = page.add('download_speed', ui.small_series_stat_card(
