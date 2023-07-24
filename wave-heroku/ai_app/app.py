@@ -145,8 +145,6 @@ while True:
     boot_card.data.usage = bt
     boot_card.plot_data[-1] = [tick, boot_time]
     
-    print(bt)
-    
     if tick % 10 == 0:
         download_speed = bytes_to_mb(speed_test.download())
         download_card.data.usage = str(download_speed)
