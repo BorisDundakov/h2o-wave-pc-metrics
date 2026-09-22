@@ -9,3 +9,5 @@ rfc3986==1.5.0
 sniffio==1.2.0
 starlette==0.13.8
 uvicorn==0.12.2
+psutil==7.2.2
+speedtest-cli==2.1.3

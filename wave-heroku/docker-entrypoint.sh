@@ -11,5 +11,4 @@ sleep 3
 
 printf '\n$ wave run --no-reload --no-autostart %s\n\n' "$PYTHON_MODULE"
 
-exec wave run --no-reload --no-autostart "$PYTHON_MODULE"
-
+exec python "$PYTHON_MODULE"
